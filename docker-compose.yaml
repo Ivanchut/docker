@@ -1,11 +1,11 @@
 services:
 
   apache:
-    container-name: apache
+    container_name: apache
     image: php:8.3-apache
     restart: unless-stopped
     ports:
-      -"8080:80"
+      - "8080:80"
     volumes:
       - /home/vm/git-dir/web:/var/www/html
     networks:
