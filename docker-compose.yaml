@@ -7,19 +7,19 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - /home/vm/git-dir/web:/var/www/html
+      - /home/vm/git-dir/web:/var/www/html:z
     networks:
       default:
 
 
-#  my-sql:
-#    container-name: my-sql
-#    image:
-#    restart: unless-stopped
-#    ports:
-#      -
-#      -
-#    volumes:
-#      -
+  mariaDB:
+    container_name: mariaDB
+    image: mariadb:11
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
 #    networks:
 #      default:
