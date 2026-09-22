@@ -2,25 +2,24 @@ services:
 
   apache:
     container-name: apache
-    image:
+    image: php:8.3-apache
     restart: unless-stopped
     ports:
-      -
-      -
+      -"8080:80"
     volumes:
-      - ./git-dir/web:
+      - /home/vm/git-dir/web:/var/www/html
     networks:
       default:
 
 
-  my-sql:
-    container-name: my-sql
-    image:
-    restart: unless-stopped
-    ports:
-      -
-      -
-    volumes:
-      -
-    networks:
-      default:
+#  my-sql:
+#    container-name: my-sql
+#    image:
+#    restart: unless-stopped
+#    ports:
+#      -
+#      -
+#    volumes:
+#      -
+#    networks:
+#      default:
