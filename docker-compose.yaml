@@ -1,0 +1,26 @@
+services:
+
+  apache:
+    container-name: apache
+    image:
+    restart: unless-stopped
+    ports:
+      -
+      -
+    volumes:
+      -
+    networks:
+      default:
+
+
+  my-sql:
+    container-name: my-sql
+    image:
+    restart: unless-stopped
+    ports:
+      -
+      -
+    volumes:
+      -
+    networks:
+      default:
