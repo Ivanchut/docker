@@ -12,7 +12,7 @@ services:
       default:
 
 
-  db:
+  mariaDB:
     container_name: mariaDB
     image: mariadb:11
     restart: unless-stopped
